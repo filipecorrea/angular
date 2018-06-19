@@ -1,0 +1,36 @@
+<div class="quotes-navigation large-responsive navigation--dark">
+    <h1>IBM Pricing</h1>
+
+    <div class="user-details">
+        <img src="{{user.picture}}">
+        <span class="name">{{user.name}}</span>
+        <small class="role">{{user.role}}</small>
+
+        <div class="logout">
+            <button ng-click="logout()" class="button--dark-background button--round">
+              <i class="fa fa-sign-out"></i>
+            </button>
+        </div>
+    </div>
+
+    <hr>
+
+    <ul>
+        <li class="selected">
+            <i class="fa fa-fw fa-briefcase"></i>
+            <span class="menu title">Open</span>
+            <span class="badge">5</span></li>
+        <li>
+            <i class="fa fa-fw fa-binoculars"></i>
+            <span class="menu title">Sent for review</span>
+            <span class="badge">5</span></li>
+        <li>
+            <i class="fa fa-fw fa-check"></i>
+            <span class="menu title">Rejected</span>
+            <span class="badge">5</span></li>
+        <li>
+            <i class="fa fa-fw fa-exclamation"></i>
+            <span class="menu title">Approved</span>
+            <span class="badge">5</span></li>
+    </ul>
+</div>

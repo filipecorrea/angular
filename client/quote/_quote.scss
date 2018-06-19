@@ -1,0 +1,35 @@
+.view-quote {
+
+  .main-info {
+    position: relative;
+    &:before { // Line across the top
+      content: '';
+      display: block;
+      position: absolute;
+      left: -1px;
+      top: -1px;
+      right: -1px;
+      height: 4px;
+      background-color: $gray;
+    }
+
+    .status {
+      background-color: $gray;
+      color: $white;
+      position: absolute;
+      right: 1.6rem;
+      top: 0;
+      padding: 1rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+
+    // Color the statuses
+    &.OP {
+      &:before { background-color: $green; }
+      .status { background-color: $green; }
+    }
+
+
+  }
+}

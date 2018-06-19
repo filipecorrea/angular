@@ -1,0 +1,47 @@
+// Sizes
+$media-sm: 768px;
+$media-md: 992px;
+$media-lg: 1200px;
+
+// Colors
+$green:         #1BB3A0;
+$darkest-green: #2C3938;
+$bg-green:      #EBF1F1;
+$gray:          #D4D4D4;
+$light-gray:    #e8e8e8;
+$mid-gray:      #B8B8B8;
+$dark-gray:     #686868;
+$white:         #FFF;
+
+// Gradients
+$grad-white-to-gray: linear-gradient(-180deg, #FFF 0%, lighten($gray, 15%) 100%);
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,600,700);
+$family-open-sans: 'Open Sans', sans-serif;
+$family-open-sans-condensed: 'Open Sans Condensed', sans-serif;
+$family-sans-serif: sans-serif;
+
+// Base font-size for ems and rems
+body { font-size: 14px; }
+
+// Prepare the terrain for positioning the fixed menus
+html, body { height: 100%; }
+
+// Disable the elastic scrolling
+// Also scroll only within the menu or the body list
+html { overflow: hidden; }
+body { overflow: scroll; }
+
+// Body bg color
+body { background-color: #F7F7F7; }
+
+/* ##########################
+   Common app-wide styling
+   ########################## */
+
+h1 {
+  font-family: $family-open-sans-condensed;
+  font-weight: 700;
+  text-transform: uppercase;
+}

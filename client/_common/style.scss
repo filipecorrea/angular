@@ -1,0 +1,18 @@
+// Bootstrap base style
+@import 'bootstrap/bootstrap-theme';
+@import 'bootstrap/bootstrap';
+
+@import '../_shared/shared';
+@import '../_shared/helpers';
+@import '../_shared/navigation';
+@import '../_shared/buttons';
+@import '../_shared/tables';
+@import '../_shared/loader/loader';
+@import '../_shared/content';
+@import '../_shared/view';
+
+@import '../navigation/quote-navigation';
+@import '../navigation/quote-list-navigation';
+
+@import '../quotes/quotes';
+@import '../quote/quote';

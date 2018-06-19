@@ -1,0 +1,127 @@
+.view-quotes {
+
+  .icon-buttons-container {
+    margin: 25px 0 0 0;
+    text-align: right;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: flex-start;
+
+    .card {
+      position: relative;
+      background: #FFF;
+      border: 1px solid #eeeeee;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      width: 100%;
+
+      &:before { // Line across the top
+        content: '';
+        display: block;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        right: -1px;
+        height: 2px;
+        background-color: $gray;
+      }
+
+      // Color the statuses
+      &.OP {
+        &:before { background-color: $green; }
+        .status { background-color: $green; }
+        .quote-number a { color: $green; }
+
+      }
+
+      // Medium – 2 columns
+      @media (min-width: 768px) and (max-width: 1280px) {
+        width: 49%;
+        &:nth-child(2n+0) { margin-left: 1%; }
+        &:nth-child(2n+1) { margin-right: 1%; }
+      }
+
+      // Big – 3 columns
+      @media (min-width: 1280px) {
+        width: 32.3%;
+        &:nth-child(3n+2) { margin-left: 1.5%; margin-right: 1.5%; }
+      }
+
+      // Elements
+      .status {
+        background: $gray;
+        color: white;
+        font-size: .9em;
+        position: absolute;
+        top: 0;
+        right: 1em;
+        padding: .4em;
+      }
+
+      .quote-number {
+        font-family: $family-open-sans;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: $gray;
+      }
+      small.opp-number {
+        font-family: $family-open-sans;
+        font-size: 0.9em;
+        font-weight: 400;
+        color: $dark-gray;
+      }
+
+      .second-section {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        margin: .6em -1em;
+        padding: .6em 1em;
+        background: $bg-green;
+
+        .section-left, .section-right { flex-grow: 1; }
+        .section-left {
+          & * { display: block; }
+        }
+        .section-right {
+          text-align: right;
+        }
+      }
+
+      .third-section {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .one-third-section {
+          flex-grow: 1;
+          text-align: center;
+
+          label, span { display: block; }
+
+          label {
+            font-size: .7em;
+            margin: 0;
+            font-weight: normal;
+            text-transform: uppercase;
+          }
+
+        }
+      }
+
+
+
+
+
+    }
+
+  }
+
+}

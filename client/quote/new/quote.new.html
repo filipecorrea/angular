@@ -1,0 +1,109 @@
+<div class="view-{{state.current.name}} view small-responsive view--content view--with-nav">
+
+    <!-- Loader -->
+    <loader ng-show="quote == undefined"></loader>
+
+    <main ng-show="quote != undefined">
+
+        <section ng-class="quote.QUOTE_STATUS" class="main-info">
+            <header>
+                {{quote.QUOTE_NUMBER}}
+                <span class="status">{{quote.QUOTE_STATUS}}</span>
+            </header>
+
+            <div class="row">
+                <p class="x-large">{{quote.QUOTE_total_tcv}}</p>
+            </div>
+
+            <div class="row no-padding">
+                <h2>Quote information</h2>
+                <a ui-sref="quoteInfo">All quote details &rarr;</a>
+            </div>
+
+            <!-- Quote informantion -->
+            <div class="row">
+
+                <div class="info-list info-list--half">
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                </div>
+
+                <div class="info-list info-list--half">
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row half-space">
+                <button class="button--big">Edit quote information</button>
+            </div>
+
+        </section>
+
+
+        <!-- Generic -->
+        <section>
+            <header>Generic</header>
+
+            <div class="row no-padding">
+                <h2>Info here</h2>
+            </div>
+
+            <div class="row">
+                <div class="info-list">
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line">
+                        <label>Customer name</label>
+                        <p>Telefonica</p>
+                    </div>
+                    <div class="line no-label">
+                        <a href="#">Teste de link</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>

@@ -1,0 +1,61 @@
+.quotes-navigation {
+    @extend .navigation;
+
+    // Logo
+    h1 {
+        @include user-select();
+        margin: 0;
+        padding: .6em 0;
+        display: inline-block;
+        color: white;
+        font-family: $family-open-sans;
+        font-size: .8em;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-top: 4px solid $green;
+
+        @media (min-width: $media-md) {
+          font-size: 1.5em;
+        }
+    }
+
+    // User details
+    .user-details {
+        $avatar-size: 32px;
+        $avatar-size-big: 42px;
+
+        position: relative;
+        text-align: left;
+        min-height: $avatar-size;
+        margin-left: 1em;
+
+        img {
+            float: left;
+            margin-right: .6em;
+            width: $avatar-size;
+            max-height: $avatar-size;
+            border-radius: $avatar-size;
+
+            @media (min-width: $media-md) {
+              width: $avatar-size-big;
+              max-height: $avatar-size-big;
+              border-radius: $avatar-size-big;
+            }
+        }
+
+        .name, .role {
+            display: none;
+            color: white;
+
+            @media (min-width: $media-md) { display: block; }
+        }
+
+        button {
+            position: absolute;
+            right: 10px;
+            top: 6px;
+        }
+    }
+
+
+}

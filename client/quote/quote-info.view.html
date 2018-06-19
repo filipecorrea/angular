@@ -1,0 +1,54 @@
+<div class="view-{{state.current.name}} view small-responsive view--content view--with-nav">
+
+    <!-- Loader -->
+    <loader ng-show="quote == undefined"></loader>
+
+    <main ng-show="quote != undefined">
+
+        <section class="deep-content">
+            <header>
+                <a ui-sref='quote'>{{quote.QUOTE_NUMBER}}</a>
+            </header>
+
+            <section>
+                <div class="row">
+                    <p class="x-large">{{quote.QUOTE_total_tcv}}</p>
+                </div>
+
+                <div class="row no-padding">
+                    <h2>Quote information</h2>
+                </div>
+
+                <!-- Quote informantion -->
+                <div class="row">
+
+                    <div class="info-list">
+                        <div class="line">
+                            <label>Customer name</label>
+                            <p>Telefonica</p>
+                        </div>
+                        <div class="line">
+                            <label>Customer name</label>
+                            <p>Telefonica</p>
+                        </div>
+                        <div class="line">
+                            <label>Customer name</label>
+                            <p>Telefonica</p>
+                        </div>
+                        <div class="line">
+                            <label>Customer name</label>
+                            <p>Telefonica</p>
+                        </div>
+                        <div class="line">
+                            <label>Customer name</label>
+                            <p>Telefonica</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+</div>

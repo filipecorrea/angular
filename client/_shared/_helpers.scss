@@ -1,0 +1,13 @@
+// Reset list styling
+.reset-list {
+    list-style: none;
+    padding: 0;
+}
+
+// Disable user text highlighting
+@mixin user-select ($value: none) {
+	-webkit-user-select: $value;
+	   -moz-user-select: $value;
+	    -ms-user-select: $value;
+	        user-select: $value;
+}

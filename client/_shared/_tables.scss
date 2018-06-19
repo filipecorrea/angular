@@ -1,0 +1,25 @@
+table.table {
+  &.clickable-line {
+    tbody {
+      tr { cursor: pointer; }
+      tr:hover a { text-decoration: underline; }
+      tr:active { background-color: lighten($green, 50%); }
+    }
+  }
+
+  td.stacked * { display: block; }
+
+  // Importance
+  .small-1 {
+    $width: 200px;
+    width: $width;
+    & * { width: $width; }
+  }
+
+  .overflow-ellipsis {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,86 @@
+.quote-navigation {
+    padding-top: 1em;
+    text-align: center;
+    @extend .navigation;
+
+    .button-row {
+        width: 100%;
+        padding: 0 1em .4em 1em;
+
+        @media (max-width: $media-md) {
+            padding: 0 .6em .4em .6em;
+        }
+
+        button {
+            width: 100%;
+
+            .expanded { display: block; }
+            .contracted { display: none; }
+
+            @media (max-width: $media-md) {
+                .expanded { display: none; }
+                .contracted { display: block; }
+            }
+        }
+    }
+
+    h2, h3, small {
+        display: block;
+        margin: 0;
+        padding: 0 1.4rem;
+        text-align: left;
+    }
+
+    h3 {
+        font-size: .9em;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        font-family: $family-open-sans;
+        font-weight: 600;
+    }
+
+    small {
+        font-size: .9em;
+    }
+
+
+    .quote-info {
+        padding: 1em 0;
+
+        h2 { margin-bottom: .8rem; }
+        h3 { margin-bottom: .4rem; }
+
+        @media (max-width: $media-md) {
+            display: none;
+        }
+    }
+
+    .quote-items {
+        @media (max-width: $media-md) {
+            li:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .ul-header {
+        margin-top: 3em;
+        margin-bottom: .4em;
+
+        @media (max-width: $media-md) { display: none; }
+    }
+
+    hr.product-separator {
+        display: none;
+        border-top: 10px solid rgba(0,0,0, .1);
+        margin: 2em 0;
+
+        @media (max-width: $media-md) {
+            display: block;
+        }
+    }
+
+}

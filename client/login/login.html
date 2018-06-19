@@ -1,0 +1,19 @@
+<div ng-show="login == undefined" class="login-block">
+  <span class="login-title">Login</span>
+  <form ng-submit="submitCredentials()">
+
+    <h1>Login with your IBM account</h1>
+    <div class="login-error-message">{{messages}}</div>
+
+    <input id="inputEmail" ng-model="credentials.username" value="credentials.username"
+    type="email" placeholder="Intranet ID" required>
+
+    <input ng-init="" id="inputPassword" ng-model="credentials.password"
+    value="credentials.password" type="password" placeholder="Password" required>
+
+    <button type="submit">Sign in</button>
+  </form>
+</div>
+
+<!-- Loader -->
+<loader ng-show="login != undefined"></loader>

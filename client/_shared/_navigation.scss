@@ -1,0 +1,131 @@
+$navigation-width: 60px;
+$navigation-width-large: 210px;
+
+// Navigation left sidebar
+.navigation {
+
+    // Main navigation styling (sidebar, buttons, etc)
+    @include user-select();
+    display: block;
+    position: fixed;
+    height: 100%;
+    width: $navigation-width;
+    overflow: scroll;
+    text-align: center;
+
+    @media (min-width: $media-md) { width: $navigation-width-large; }
+
+    // Menu
+    ul {
+        @extend .reset-list;
+        text-align: left;
+
+        li {
+            position: relative;
+            font-family: $family-sans-serif;
+            padding: 1em;
+            text-align: center;
+            transition: background-color 0.1s ease;
+
+            @media (min-width: $media-md) { text-align: left; }
+
+            &:hover { cursor: pointer; }
+            &.selected { cursor: default; }
+
+            i { // Menu icon
+                margin: 0 0.2em 0 0;
+            }
+
+            span { // Menu label and badge
+                display: none;
+                @media (min-width: $media-md) { display: inline; }
+            }
+        }
+    }
+}
+
+// Themes / Colors
+.navigation {
+
+    // Dark style
+    &--dark {
+        background: #2d3938;
+
+        li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+
+            &:hover { background-color: rgba(255,255,255, 0.1); }
+
+            &.selected {
+                background: $green;
+                cursor: default;
+            }
+        }
+
+        .badge {
+            background-color: rgba(0,0,0, .5);
+        }
+
+        hr {
+            border-top: 5px solid rgba(0,0,0,.2);
+            margin: 1rem 0 .5em 0;
+        }
+    }
+
+    // Light style
+    &--light {
+        background: #D9E1E0;
+
+        li {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            color: #2C3937;
+
+            &:hover { background-color: rgba(255,255,255, 0.25); }
+
+            &.selected {
+                position: relative;
+                background: rgba(255,255,255, 0.5);
+                cursor: default;
+
+                &:before {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    background-color: $green;
+                    width: 5px;
+                }
+            }
+        }
+
+        hr {
+            border-top: 1px solid rgba(0,0,0, .1);
+            margin: 1rem 0 .5em 0;
+        }
+    }
+}
+
+// Position the view container when there's a nav
+.view--with-nav {
+    margin-left: $navigation-width;
+    @media (min-width: $media-md) { margin-left: $navigation-width-large; }
+}
+
+// Animate the navigation
+.navigation--animated {
+    //Adjustments to make translate work
+    height: 100%;
+    position: fixed;
+
+    &.ng-enter {
+        transition: transform 0.3s ease-out;
+        transform: translate(-40px, 0);
+    }
+
+    &.ng-enter-active {
+        transform: translate(0, 0);
+    }
+
+}
